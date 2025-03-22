@@ -1,5 +1,5 @@
 {
-  "name": "clickup-clone",
+  "name": "blank-canvas",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:clickup-clone": "node dist/clickup-clone/server/server.mjs"
+    "serve:ssr:blank-canvas": "node dist/blank-canvas/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -20,8 +20,15 @@
     "@angular/platform-server": "^19.2.0",
     "@angular/router": "^19.2.0",
     "@angular/ssr": "^19.2.4",
+    "@primeng/themes": "^19.0.10",
+    "@tailwindcss/postcss": "^4.0.15",
     "express": "^4.18.2",
+    "postcss": "^8.5.3",
+    "primeicons": "^7.0.0",
+    "primeng": "^19.0.10",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^4.0.15",
+    "tailwindcss-primeui": "^0.5.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

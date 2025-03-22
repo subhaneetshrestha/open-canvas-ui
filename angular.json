@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "clickup-clone": {
+    "open-canvas": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -15,12 +15,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "pbs",
+      "prefix": "clp",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/clickup-clone",
+            "outputPath": "dist/open-canvas",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [],
@@ -32,9 +32,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": [],
             "server": "src/main.server.ts",
             "outputMode": "server",
@@ -61,19 +59,29 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "host": "127.0.0.1",
+            "hmr": false
+          },
           "configurations": {
             "production": {
-              "buildTarget": "clickup-clone:build:production"
+              "buildTarget": "open-canvas:build:production"
             },
             "development": {
-              "buildTarget": "clickup-clone:build:development"
+              "buildTarget": "open-canvas:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,9 +101,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
