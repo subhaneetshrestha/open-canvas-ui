@@ -61,5 +61,10 @@ export const CustomTheme = definePreset(Aura, {
       width: '2.8rem',
       height: '2.8rem',
     },
+    card: {
+      body: {
+        gap: '2rem',
+      },
+    },
   },
 });

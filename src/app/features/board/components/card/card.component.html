@@ -1,0 +1,43 @@
+<p-card
+  (mousedown)="onMouseDown($event)"
+  (mouseup)="onMouseUp($event)"
+  pDraggable
+  (onDragStart)="onDragStart('test')"
+  dragEffect="all"
+  class="cursor-pointer active:cursor-grabbing"
+>
+  <ng-template #title>
+    <p class="line-clamp-2">Create API to load all pokemon with search</p>
+  </ng-template>
+  <ng-template #content>
+    <p class="text-sm line-clamp-3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, possimus consequatur ut
+      recusandae facilis dolores aliquid dicta fugiat, laboriosam fuga natus eligendi voluptate
+      quisquam corrupti praesentium adipisci quam perferendis optio.
+    </p>
+  </ng-template>
+  <ng-template #footer>
+    <div class="flex items-center justify-between">
+      <div class="flex gap-2 text-sm">
+        <div>
+          <div class="flex items-center gap-2">
+            <i class="pi pi-comment"></i>
+            Nov, 30
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <i class="pi pi-link"></i>
+            3
+          </div>
+        </div>
+      </div>
+      <div class="text-sm">
+        <div class="flex items-center gap-2">
+          <i class="pi pi-calendar"></i>
+          Nov, 30
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-card>

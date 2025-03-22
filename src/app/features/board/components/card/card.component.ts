@@ -1,19 +1,15 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { Button } from 'primeng/button';
-import { Avatar } from 'primeng/avatar';
-import { AvatarGroup } from 'primeng/avatargroup';
-
-import { ColumnComponent } from '@features/board/components/column/column.component';
-import { CardComponent } from '@features/board/components/card/card.component';
+import { DragDropModule } from 'primeng/dragdrop';
+import { Card } from 'primeng/card';
 
 @Component({
-  selector: 'clp-board',
-  imports: [Button, AvatarGroup, Avatar, ColumnComponent, CardComponent],
-  templateUrl: './board.component.html',
+  selector: 'clp-card',
+  imports: [DragDropModule, Card],
+  templateUrl: './card.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BoardComponent {
+export class CardComponent {
   isDragging = false;
   startX = 0;
   startY = 0;
@@ -36,11 +32,6 @@ export class BoardComponent {
   onDragStart(event: any) {
     this.isDragging = true; // Set dragging state when drag starts
     console.log('Drag started', event);
-  }
-
-  onDragEnd(event: any) {
-    this.isDragging = false; // Reset dragging state when drag ends
-    console.log('Drag ended', event);
   }
 
   cardClick() {

@@ -1,0 +1,11 @@
+<div class="flex justify-between">
+  <div class="flex gap-2 items-center">
+    <span>DEV</span>
+    <p-badge class="bg-none" value="2" />
+  </div>
+  <p-button size="small" variant="text" icon="pi pi-ellipsis-h" />
+</div>
+
+<div (onDrop)="onDragEnd($event)" pDroppable class="flex flex-col gap-8">
+  <ng-content />
+</div>
