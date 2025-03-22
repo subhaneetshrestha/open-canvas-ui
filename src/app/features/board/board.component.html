@@ -1,0 +1,78 @@
+<main class="flex flex-col gap-8">
+  <section class="flex justify-between">
+    <h2 class="flex-1 text-3xl">Pokemon Battle Simulator</h2>
+    <div class="flex gap-4">
+      <p-button outlined="true" size="small" icon="pi pi-lightbulb" />
+      <p-button outlined="true" size="small" icon="pi pi-star" />
+      <p-button outlined="true" size="small" label="Share" icon="pi pi-users" />
+    </div>
+  </section>
+
+  <section class="flex items-center gap-8">
+    <p-avatar-group>
+      @let avatarItems = [1,2,3,4,5,6]; @let extraCount = avatarItems.length > 4 ?
+      avatarItems.length - 4 : 0; @for (item of avatarItems; track $index; let last = $last) {
+      @if(item <=4) {
+      <p-avatar
+        image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+        size="normal"
+        shape="circle"
+      />
+      } @if(last) {
+      <p-avatar [label]="extraCount + ''" shape="circle" size="normal" />
+      } }
+    </p-avatar-group>
+    <p-button raised="true" size="small" label="Only me" severity="secondary" />
+  </section>
+
+  <section class="flex flex-row gap-16 overflow-x-auto">
+    <div class="flex flex-col gap-4 w-1/5 min-w-1/5">
+      <div class="flex justify-between">
+        <div class="flex gap-2 items-center">
+          <span>TODO</span>
+          <p-badge class="bg-none" value="2" />
+        </div>
+        <p-button size="small" variant="text" icon="pi pi-ellipsis-h" />
+      </div>
+
+      <div pDroppable class="flex flex-col gap-8">
+        <p-card pDraggable dragEffect="all" class="cursor-grab">
+          <ng-template #header> </ng-template>
+          <ng-template #title>
+            <p class="line-clamp-2">Create API to load all pokemon with search</p>
+          </ng-template>
+          <p class="text-xs line-clamp-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, possimus consequatur
+            ut recusandae facilis dolores aliquid dicta fugiat, laboriosam fuga natus eligendi
+            voluptate quisquam corrupti praesentium adipisci quam perferendis optio.
+          </p>
+          <ng-template #footer>
+            <div>
+              <div></div>
+              <div></div>
+            </div>
+            <div></div>
+          </ng-template>
+        </p-card>
+        <p-card pDraggable class="cursor-grab">
+          <ng-template #header> </ng-template>
+          <ng-template #title>
+            <p class="line-clamp-2">Create API to load all pokemon with search</p>
+          </ng-template>
+          <p class="text-xs line-clamp-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, possimus consequatur
+            ut recusandae facilis dolores aliquid dicta fugiat, laboriosam fuga natus eligendi
+            voluptate quisquam corrupti praesentium adipisci quam perferendis optio.
+          </p>
+          <ng-template #footer>
+            <div>
+              <div></div>
+              <div></div>
+            </div>
+            <div></div>
+          </ng-template>
+        </p-card>
+      </div>
+    </div>
+  </section>
+</main>
