@@ -1,0 +1,29 @@
+<main>
+  <section></section>
+  <section class="flex flex-col gap-12 px-16">
+    <clp-navbar />
+    <div>
+      <p-breadcrumb styleClass="text-xs" [model]="items" [home]="home">
+        <ng-template #item let-item>
+          @if(item.route) {
+          <ng-container>
+            <a [routerLink]="item.route" class="p-breadcrumb-item-link">
+              <span [ngClass]="[item.icon ? item.icon : '', 'text-color']"></span>
+              <span class="text-primary font-semibold">{{ item.label }}</span>
+            </a>
+          </ng-container>
+          } @else {
+          <ng-container>
+            <a [href]="item.url">
+              <span class="text-color">{{ item.label }}</span>
+            </a>
+          </ng-container>
+          }
+        </ng-template>
+      </p-breadcrumb>
+    </div>
+    <div>
+      <router-outlet />
+    </div>
+  </section>
+</main>
