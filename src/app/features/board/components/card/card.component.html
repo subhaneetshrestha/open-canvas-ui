@@ -4,21 +4,26 @@
   pDraggable
   (onDragStart)="onDragStart('test')"
   dragEffect="all"
-  class="cursor-pointer active:cursor-grabbing"
+  class="cursor-pointer active:cursor-grabbing w-full sm:w-96"
 >
+  <!-- Title -->
   <ng-template #title>
-    <p class="line-clamp-2">Create API to load all pokemon with search</p>
+    <p class="text-sm sm:text-base line-clamp-2">Create API to load all pokemon with search</p>
   </ng-template>
+
+  <!-- Content -->
   <ng-template #content>
-    <p class="text-sm line-clamp-3">
+    <p class="text-xs sm:text-sm line-clamp-3">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, possimus consequatur ut
       recusandae facilis dolores aliquid dicta fugiat, laboriosam fuga natus eligendi voluptate
       quisquam corrupti praesentium adipisci quam perferendis optio.
     </p>
   </ng-template>
+
+  <!-- Footer -->
   <ng-template #footer>
     <div class="flex items-center justify-between">
-      <div class="flex gap-2 text-sm">
+      <div class="flex gap-2 text-xs sm:text-sm">
         <div>
           <div class="flex items-center gap-2">
             <i class="pi pi-comment"></i>
@@ -32,7 +37,7 @@
           </div>
         </div>
       </div>
-      <div class="text-sm">
+      <div class="text-xs sm:text-sm">
         <div class="flex items-center gap-2">
           <i class="pi pi-calendar"></i>
           Nov, 30

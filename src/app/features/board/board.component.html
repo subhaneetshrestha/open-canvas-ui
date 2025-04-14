@@ -1,35 +1,46 @@
-<main class="flex flex-col gap-8">
-  <section class="flex justify-between">
-    <h2 class="flex-1 text-3xl">Pokemon Battle Simulator</h2>
-    <div class="flex gap-4">
+<main class="flex flex-col gap-4 sm:gap-8 p-4 sm:p-8">
+  <!-- Header Section -->
+  <section class="flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
+    <h2 class="flex-1 text-2xl sm:text-3xl">Pokemon Battle Simulator</h2>
+    <div class="flex gap-2 sm:gap-4">
       <p-button outlined="true" size="small" icon="pi pi-lightbulb" />
       <p-button outlined="true" size="small" icon="pi pi-star" />
-      <p-button outlined="true" size="small" label="Share" icon="pi pi-users" />
+      <p-button
+        outlined="true"
+        size="small"
+        label="Share"
+        icon="pi pi-users"
+        class="hidden sm:inline-flex"
+      />
     </div>
   </section>
 
-  <section class="flex items-center gap-8">
+  <!-- Avatar and Button Section -->
+  <section class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
     <p-avatar-group>
-      @let avatarItems = [1,2,3,4,5,6]; @let extraCount = avatarItems.length > 4 ?
-      avatarItems.length - 4 : 0; @for (item of avatarItems; track $index; let last = $last) {
-      @if(item <=4) {
+      @let avatarItems = [1, 2, 3, 4, 5, 6]; @let extraCount = avatarItems.length > 4 ?
+      avatarItems.length - 4 : 0; @for (item of avatarItems; track $index; let last = $last) { @if
+      (item <= 4) {
       <p-avatar
         image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
         size="normal"
         shape="circle"
+        class="cursor-pointer"
       />
-      } @if(last) {
-      <p-avatar [label]="extraCount + ''" shape="circle" size="normal" />
+      } @if (last) {
+      <p-avatar class="cursor-pointer" [label]="'+' + extraCount" shape="circle" size="normal" />
       } }
     </p-avatar-group>
-    <p-button raised="true" size="small" label="Only me" severity="secondary" />
+    <p-button raised="true" size="small" label="Only me" class="w-full sm:w-auto" />
   </section>
 
-  <section class="flex flex-row gap-16 overflow-x-auto">
+  <!-- Columns Section -->
+  <section class="flex flex-row gap-4 sm:gap-16 overflow-x-auto">
     <clp-column
-      class="flex flex-col gap-4 w-2/9 p-4 rounded-lg min-w-2/7 bg-slate-200 dark:bg-zinc-800"
+      class="flex flex-col gap-4 w-full sm:w-2/9 p-4 rounded-lg min-w-[200px] sm:min-w-[250px] bg-slate-200 dark:bg-zinc-800"
     >
       <clp-card />
     </clp-column>
+    <!-- Add more columns as needed -->
   </section>
 </main>

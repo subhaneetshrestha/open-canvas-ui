@@ -6,7 +6,6 @@ import { AvatarGroup } from 'primeng/avatargroup';
 
 import { ColumnComponent } from '@features/board/components/column/column.component';
 import { CardComponent } from '@features/board/components/card/card.component';
-
 @Component({
   selector: 'clp-board',
   imports: [Button, AvatarGroup, Avatar, ColumnComponent, CardComponent],
