@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+
+import { authGuardFn } from '@core/guards/auth.guard';
 import { ROUTE } from '@shared/constants/route.constant';
 
 export const routes: Routes = [
@@ -8,6 +10,7 @@ export const routes: Routes = [
   },
   {
     path: ROUTE.WORKSPACE,
+    canActivate: [authGuardFn],
     loadChildren: () =>
       import('@layouts/private/private.routes').then((route) => route.privateRoutes),
   },

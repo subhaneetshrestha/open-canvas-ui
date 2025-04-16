@@ -14,9 +14,8 @@ import { NavbarComponent } from '@shared/components/navbar/navbar.component';
 })
 export class PrivateComponent {
   items: MenuItem[] = [
-    { label: 'Workspace', routerLink: '/' },
-    { label: 'Pokemon Battle Simulator', routerLink: '/' },
-    { label: 'Board', routerLink: '/' },
+    { label: 'Workspace', routerLink: '/workspace' },
+    { label: 'Pokemon Battle Simulator', routerLink: '/workspace/pokemon-battle-simulator' },
   ];
 
   home: MenuItem = { icon: 'pi pi-home', routerLink: '/' };

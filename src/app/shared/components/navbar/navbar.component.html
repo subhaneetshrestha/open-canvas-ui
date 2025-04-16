@@ -1,15 +1,15 @@
 <div class="sticky">
-  <div class="flex justify-between items-center">
+  <div class="flex justify-between items-center py-12">
     <div class="flex gap-12">
-      <div class="flex gap-2 justify-center items-center cursor-pointer py-12">
+      <a routerLink="/" class="flex gap-2 justify-center items-center cursor-pointer">
         <i class="pi pi-list"></i>List
-      </div>
-      <div class="flex gap-2 justify-center cursor-pointer items-center">
+      </a>
+      <a routerLink="board" class="flex gap-2 justify-center cursor-pointer items-center">
         <i class="pi pi-table"></i>Board
-      </div>
-      <div class="flex gap-2 justify-center cursor-pointer items-center">
+      </a>
+      <a routerLink="" class="flex gap-2 justify-center cursor-pointer items-center">
         <i class="pi pi-calendar"></i>Calendar
-      </div>
+      </a>
     </div>
     <div class="flex gap-8 items-center">
       <p-iconfield>
@@ -25,7 +25,22 @@
       </p-iconfield>
       <div class="cursor-pointer"><i class="pi pi-comment"></i></div>
       <div class="cursor-pointer"><i class="pi pi-bell"></i></div>
-      <p-avatar label="V" shape="circle" />
+      <div class="inline-block text-left">
+        <p-avatar
+          title="View your profile and settings"
+          label="V"
+          shape="circle"
+          class="cursor-pointer"
+          (click)="menu.toggle($event)"
+        />
+        <p-menu
+          class="mt-2"
+          #menu
+          [model]="menuItems()"
+          [popup]="true"
+          styleClass="z-50 mt-6 min-w-[12rem] rounded-xl shadow-lg border border-gray-200 bg-white"
+        />
+      </div>
     </div>
   </div>
 </div>

@@ -21,7 +21,8 @@
       "@layouts/*": ["./src/app/layouts/*"],
       "@features/*": ["./src/app/features/*"],
       "@shared/*": ["./src/app/shared/*"],
-      "@core/*": ["./src/app/core/*"]
+      "@core/*": ["./src/app/core/*"],
+      "@environment/*": ["./src/environments/*"]
     }
   },
   "angularCompilerOptions": {

@@ -5,9 +5,9 @@
     <div>
       <p-breadcrumb styleClass="text-xs" [model]="items" [home]="home">
         <ng-template #item let-item>
-          @if(item.route) {
+          @if(item.routerLink) {
           <ng-container>
-            <a [routerLink]="item.route" class="p-breadcrumb-item-link">
+            <a [routerLink]="item.routerLink" class="p-breadcrumb-item-link">
               <span [ngClass]="[item.icon ? item.icon : '', 'text-color']"></span>
               <span class="text-primary font-semibold">{{ item.label }}</span>
             </a>
